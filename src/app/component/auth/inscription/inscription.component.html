@@ -1,0 +1,104 @@
+<form [formGroup]="webinarForm" (ngSubmit)="onSubmit()">
+    <!-- Informations générales -->
+    <fieldset >
+      <legend>Inscription</legend>
+      <div class="form-group">
+        <label for="role">Etes vous ?</label>
+            <select id="role" formControlName="role" class="form-select">
+                <option value="citozen">Citoyen</option>
+                <option value="autority">Autorite publique</option>
+                <option value="supplier">Entreprise prestataire</option>
+            </select>
+           <div *ngIf="webinarForm.get('role')?.invalid && webinarForm.get('role')?.touched">
+          <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+        </div>
+      </div>
+    </fieldset >
+
+    <fieldset >
+        <div class="form-group">
+          <label for="first_name">Nom</label>
+          <input id="first_name" formControlName="first_name" type="text" placeholder="Nom" />
+          <div *ngIf="webinarForm.get('first_name')?.invalid && webinarForm.get('first_name')?.touched">
+            <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="last_name">Prenom</label>
+          <input id="last_name" formControlName="last_name" type="text" placeholder="Prenom" />
+          <div *ngIf="webinarForm.get('last_name')?.invalid && webinarForm.get('last_name')?.touched">
+            <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset >
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" formControlName="email" type="text" placeholder="Email" />
+          <div *ngIf="webinarForm.get('email')?.invalid && webinarForm.get('email')?.touched">
+            <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" formControlName="password" type="text" placeholder="Password" />
+          <div *ngIf="webinarForm.get('password')?.invalid && webinarForm.get('password')?.touched">
+            <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset >
+        <div class="form-group">
+          <label for="phone_number">Numero de telephone</label>
+          <input id="phone_number" formControlName="phone_number" type="text" placeholder="phone_number" />
+          <div *ngIf="webinarForm.get('phone_number')?.invalid && webinarForm.get('phone_number')?.touched">
+            <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="profession">Profession</label>
+          <input id="profession" formControlName="profession" type="text" placeholder="profession" />
+          <div *ngIf="webinarForm.get('profession')?.invalid && webinarForm.get('profession')?.touched">
+            <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset >
+        <div class="form-group">
+          <label for="name_organization">Nom de l'organization</label>
+          <input id="name_organization" formControlName="name_organization" type="text" placeholder="Nom organization" />
+          <div *ngIf="webinarForm.get('name_organization')?.invalid && webinarForm.get('name_organization')?.touched">
+            <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nom_entreprise">Nom de de l'entreprise</label>
+          <input id="nom_entreprise" formControlName="nom_entreprise" type="text" placeholder="Nom entreprise" />
+          <div *ngIf="webinarForm.get('nom_entreprise')?.invalid && webinarForm.get('nom_entreprise')?.touched">
+            <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label for="secteur_activite">secteur d'activite</label>
+            <input id="secteur_activite" formControlName="secteur_activite" type="text" placeholder="secteur activite" />
+            <div *ngIf="webinarForm.get('secteur_activite')?.invalid && webinarForm.get('secteur_activite')?.touched">
+              <small class="error">Le titre est requis et ne doit pas dépasser 100 caractères.</small>
+            </div>
+          </div>
+      </fieldset>
+
+      <fieldset >
+        <div class="form-group">
+            <input type="file" (change)="onFileSelected($event)">
+        </div>
+      </fieldset>
+
+  </form>

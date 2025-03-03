@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 0;
+}
+.header img {
+    height: 40px;
+}
+.nav-pills {
+    background-color: #27ae60;
+}
+.nav-pills .nav-link {
+    color: white;
+}
+.nav-pills .nav-link.active {
+    background-color: white;
+    color: #27ae60;
+}
+.main-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.main-content h1, .main-content h2 {
+    color: #e74c3c;
+}
+.section-title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+.table-section {
+    margin-top: 20px;
+}
+.table-section table {
+    width: 100%;
+}
+.table-section th {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+}
+.table-section td {
+    text-align: center;
+}
+.btn-green {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+.footer {
+    background-color: #34495e;
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.footer a {
+    color: #3498db;
+}
+
+/* Nouvelles sections CSS */
+.dashboard-section, .history-section, .generate-section, .error-detection-section, .download-section, .manage-states-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+.dashboard-section h2, .history-section h2, .generate-section h2, .error-detection-section h2, .download-section h2, .manage-states-section h2 {
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+}
+#qrcode {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.alert {
+    margin-top: 15px;
+}

@@ -1,0 +1,166 @@
+
+<nav class=" container navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" >Accueil</a>
+          <a class="nav-link active" aria-current="page" href="#">Génération</a>
+          <a class="nav-link active" aria-current="page" href="#">Historique</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+<div class="header text-center">
+    <!-- Le header reste inchangé -->
+</div>
+<ul class="nav nav-pills justify-content-center">
+    <!-- La navigation reste inchangée -->
+</ul>
+<div class="main-content container">
+    <!-- Section 1: Dashboard principal -->
+    <div class="dashboard-section">
+        <h2>Écran d’accueil - Dashboard principal</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Vue d'ensemble des états financiers générés</h3>
+                <!-- Ici, vous pouvez ajouter un tableau ou des graphiques via JavaScript -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>État Financier</th>
+                            <th>Période</th>
+                            <th>Montant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Remplir avec des données dynamiques -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <h3>Indicateurs clés</h3>
+                <ul>
+                    <li>Nombre d’états générés: <span id="generatedStates">0</span></li>
+                    <li>Erreurs détectées: <span id="detectedErrors">0</span></li>
+                    <li>Téléchargements: <span id="downloads">0</span></li>
+                </ul>
+                <h3>Accès rapide aux dernières actions</h3>
+                <ul>
+                    <li>Création: <a href="#">Dernier état créé</a></li>
+                    <li>Consultation: <a href="#">Dernier état consulté</a></li>
+                    <li>Validation: <a href="#">Dernier état validé</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Consultation de l’historique -->
+    <div class="history-section">
+        <h2>Consultation de l’historique</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <input type="text" class="form-control" placeholder="Filtrer par date, type d’état, statut">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>État Financier</th>
+                            <th>Période</th>
+                            <th>Entité</th>
+                            <th>Statut</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Remplir avec des données dynamiques -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-green">Télécharger en PDF</button>
+                <button class="btn btn-green">Télécharger en Excel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Génération d’un état financier -->
+    <div class="generate-section">
+        <h2>Génération d’un état financier</h2>
+        <form>
+            <div class="form-group">
+                <label for="format">Sélection du format reparamétré</label>
+                <select class="form-control" id="format">
+                    <option>PDF</option>
+                    <option>Excel</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="importData">Importation des données</label>
+                <input type="file" class="form-control-file" id="importData">
+                <small class="form-text text-muted">Ou via API/ERP</small>
+            </div>
+            <button type="submit" class="btn btn-green">Vérifier les incohérences</button>
+            <button type="button" class="btn btn-green">Valider et Générer</button>
+        </form>
+    </div>
+
+    <!-- Section 4: Détection d’erreurs et correction -->
+    <div class="error-detection-section">
+        <h2>Détection d’erreurs et correction</h2>
+        <div class="alert alert-warning" role="alert">
+            Anomalies détectées: <span id="anomalies">0</span>
+        </div>
+        <div id="suggestions">
+            <!-- Suggestions de correction ici -->
+        </div>
+        <button class="btn btn-green">Valider avant génération finale</button>
+    </div>
+
+    <!-- Section 5: Téléchargement et impression sécurisés -->
+    <div class="download-section">
+        <h2>Téléchargement et impression sécurisés</h2>
+        <div id="qrcode">
+            <!-- QR Code sera généré ici via JavaScript -->
+        </div>
+        <button class="btn btn-green">Télécharger</button>
+        <button class="btn btn-green">Imprimer</button>
+        <div>Suivi des téléchargements: <span id="downloadTracking">0</span></div>
+    </div>
+
+    <!-- Section 6: Gestion des états spécifiques -->
+    <div class="manage-states-section">
+        <h2>Gestion des états spécifiques</h2>
+        <button class="btn btn-green">Ajouter un modèle</button>
+        <button class="btn btn-green">Modifier un modèle</button>
+        <div>
+            <label for="userRights">Attribution des droits d’accès</label>
+            <select class="form-control" id="userRights">
+                <option>Utilisateur 1</option>
+                <option>Utilisateur 2</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Les sections existantes -->
+    <div class="row">
+        <div class="col-md-8">
+            <!-- Contenu existant -->
+        </div>
+        <div class="col-md-4">
+            <!-- Contenu existant -->
+        </div>
+    </div>
+    <div class="row table-section">
+        <!-- Contenu existant -->
+    </div>
+</div>
+<div class="footer text-center">
+    <!-- Le footer reste inchangé -->
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Ajoutez ici des scripts pour la gestion dynamique des fonctionnalités -->
